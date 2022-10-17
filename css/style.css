@@ -1,0 +1,324 @@
+/* RESETEO */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3ccd4;
+}
+
+/* COMINEZO HEADER */
+
+header {
+    background-color: #f7f7f7;
+}
+
+.navegar {
+    width: 100%;
+}
+
+.nav-img {
+    width: 15%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.navegacion {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+    margin: 0px 40px;
+}
+
+/* COMIENZO PAGINA DE INICIO */
+
+.container {
+    width: 75%;
+    height: 100%;
+}
+
+.imagenes {
+    display: flex;
+    overflow: auto;
+    margin: 20px;
+    gap: 10px;
+    scroll-behavior: auto;
+}
+
+/* COMIENZO ACERCA DE MI */
+
+.saludo {
+
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.yo {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0px 20px;
+    text-align: justify;
+    align-items: center;
+}
+
+.yo div p {
+    padding: 20px;
+    text-align: justify;
+}
+
+.img img {
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+}
+
+/* COMIENZO INSPIRACIONES */
+
+.contenedor-inspiraciones {
+    margin: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.inspiraciones {
+    border: 2px solid rgb(162, 58, 117);
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.inspiraciones-titulo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.inspiraciones div p {
+    text-align: center;
+}
+
+.img-inspiraciones {
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+}
+
+.inspiraciones-zaha {
+    grid-area: zaha;
+}
+
+.inspiraciones-peter {
+    grid-area: peter;
+}
+
+.inspiraciones-joe {
+    grid-area: joe;
+}
+
+/* COMIENZO PROYECTOS */
+
+.proyectos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.linkproyecto {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.transition:hover {
+    transform: scale(1.1);
+}
+
+.transition img {
+    transition-delay: 3s;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.linkproyecto a {
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 7px;
+}
+
+.linkreves a {
+    background-color: #f4f4f4;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 7px;
+}
+
+/* COMIENZO CONTACTOS */
+
+.contacto {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin: 20px 40px;
+}
+
+.mapa {
+    width: 100%;
+}
+
+.contacto-form {
+    border: 2px solid rgb(162, 58, 117);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+
+}
+
+.contacto-form h2 {
+    margin-top: 40px;
+}
+
+
+.contacto-form h3 {
+    margin-top: 40px;
+}
+
+.contacto-form form div {
+    margin: 20px 0px;
+}
+
+
+/* INICIO FOOTER */
+
+footer ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+footer ul li {
+    margin: 15px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .img img {
+        width: 400px;
+        height: 500px;
+        padding: 25px;
+    }
+
+    .inspiraciones-titulo {
+        font-size: 1.5rem;
+    }
+
+    .contacto {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .yo {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .img img {
+        width: 500px;
+        height: 600px;
+    }
+
+    .contenedor-inspiraciones {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .inspiraciones div p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .linkreves {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .mapa {
+        width: 135%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .contenedor-inspiraciones {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "zaha zaha joe"
+            "peter peter joe";
+    }
+
+    .img-inspiraciones {
+        width: 250px;
+        height: 350px;
+    }
+
+    .inspiraciones-zaha {
+        flex-flow: row;
+    }
+
+    .inspiraciones-peter {
+        flex-flow: row;
+    }
+
+    .inspiraciones-joe {
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .inspiraciones-joe div img {
+        width: 400px;
+        height: 500px;
+    }
+
+    .mapa {
+        width: 200%;
+    }
+}
